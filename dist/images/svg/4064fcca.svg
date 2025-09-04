@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" width="300" height="160" role="img" aria-labelledby="title">
+    <title id="title">Car icon</title>
+    <style>
+        :root {
+        --car-body: #1f2937;     /* колір кузова */
+        --car-accent: #22c55e;   /* акцент/полоса */
+        --car-window: #dbeafe;   /* вікна */
+        --car-tyre: #0f172a;     /* шини */
+        --car-rim: #e5e7eb;      /* диски */
+        --car-light: #fde68a;    /* фари */
+        --stroke: rgba(0,0,0,.12);
+        }
+        .s { stroke: var(--stroke); stroke-width: 2; }
+    </style>
+
+    <!-- тінь -->
+    <ellipse cx="150" cy="138" rx="95" ry="10" fill="rgba(0,0,0,.12)"/>
+
+    <!-- нижня частина кузова -->
+    <rect x="30" y="80" width="240" height="40" rx="12" fill="var(--car-body)" class="s"/>
+
+    <!-- дах + капот (силует) -->
+    <path d="M60 80 L95 60 Q105 55 125 55 L195 55 Q210 55 220 65 L240 80 Z"
+          fill="var(--car-body)" class="s"/>
+
+    <!-- вікна -->
+    <path d="M100 78 L130 60 L190 60 Q199 60 206 67 L215 78 Z"
+          fill="var(--car-window)"/>
+
+    <!-- акцентна полоса -->
+    <rect x="40" y="100" width="220" height="6" rx="3" fill="var(--car-accent)"/>
+
+    <!-- колеса -->
+    <g>
+        <!-- ліве -->
+        <circle cx="95" cy="120" r="18" fill="var(--car-tyre)"/>
+        <circle cx="95" cy="120" r="10" fill="var(--car-rim)"/>
+        <!-- праве -->
+        <circle cx="215" cy="120" r="18" fill="var(--car-tyre)"/>
+        <circle cx="215" cy="120" r="10" fill="var(--car-rim)"/>
+    </g>
+
+    <!-- фари -->
+    <circle cx="48" cy="100" r="5" fill="var(--car-light)"/>
+    <rect x="252" y="98" width="8" height="6" rx="2" fill="var(--car-light)"/>
+</svg>

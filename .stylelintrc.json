@@ -1,0 +1,15 @@
+{
+    "extends": [
+        "stylelint-config-standard-scss"
+    ],
+    "plugins": [
+        "stylelint-scss",
+        "@stylistic/stylelint-plugin"
+    ],
+    "rules": {
+        "scss/at-rule-no-unknown": null,
+        "at-rule-no-unknown": null,
+        "@stylistic/indentation": 4,
+        "@stylistic/max-empty-lines": 1
+    }
+}
