@@ -29,7 +29,7 @@ export default (env: EnvVariables) => {
         output: {
             filename: 'js/[name].[contenthash:8].js',
             path: path.resolve(__dirname, 'dist'),
-            publicPath: '/', // щоб URL ассетів були акуратні
+            publicPath: '/',
             clean: true,
         },
         plugins: [
@@ -55,7 +55,6 @@ export default (env: EnvVariables) => {
         ].filter(Boolean) as webpack.WebpackPluginInstance[],
         module: {
             rules: [
-                // ⬇️ SWC замість ts-loader
                 {
                     test: /\.[jt]sx?$/i,
                     include: paths.src,
@@ -74,7 +73,7 @@ export default (env: EnvVariables) => {
                                     react: {
                                         runtime: 'automatic',
                                         development: isDev,
-                                        refresh: isDev, // для React Fast Refresh
+                                        refresh: isDev, // React Fast Refresh
                                     },
                                 },
                             },
@@ -114,7 +113,7 @@ export default (env: EnvVariables) => {
                     generator: { filename: isDev ? 'images/[name]--[contenthash:5][ext]' : 'images/[contenthash:8][ext]' },
                 },
 
-                // SVG: компонент за замовчуванням, URL за ?url або з CSS
+                // SVG: ?url
                 {
                     test: /\.svg$/i,
                     oneOf: [
@@ -145,7 +144,7 @@ export default (env: EnvVariables) => {
                 progress: false,
             },
         } as DevServerConfiguration,
-        // (опц.) увімкнути code-splitting/runtime-гілку більш явно
+        // code-splitting/runtime
         // optimization: {
         //   runtimeChunk: 'single',
         //   splitChunks: { chunks: 'all' },
