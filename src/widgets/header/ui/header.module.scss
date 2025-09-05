@@ -1,0 +1,22 @@
+.header {
+    background-color: #fff;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    position: relative;
+    height: 68px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
